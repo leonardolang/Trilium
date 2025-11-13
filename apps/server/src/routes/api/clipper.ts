@@ -68,7 +68,7 @@ async function addClipping(req: Request) {
 }
 
 function findClippingNote(clipperInboxNote: BNote, pageUrl: string, clipType: string | null) {
-    if (!pageUrl) {
+    if (!pageUrl || (pageUrl == "about:blank")) {
         return null;
     }
 
@@ -118,8 +118,11 @@ async function createNote(req: Request) {
 
         note.setLabel("clipType", clipType);
 
-        if (pageUrl) {
+        if (pageUrl && pageUrl !== "about:blank") {
             note.setLabel("pageUrl", pageUrl);
+        }
+
+        if (pageUrl) {
             note.setLabel("iconClass", "bx bx-globe");
         }
     }
