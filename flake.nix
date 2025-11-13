@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/master";
     flake-utils.url = "github:numtide/flake-utils";
     pnpm2nix = {
-      url = "github:FliegendeWurst/pnpm2nix-nzbr";
+      url = "github:leonardolang/pnpm2nix-nzbr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -85,6 +85,8 @@
 
             workspace = fullCleanSource ./.;
             pnpmWorkspaceYaml = ./pnpm-workspace.yaml;
+
+            installParams = [ "--package-import-method=hardlink" ];
 
             inherit nodejs pnpm;
 
