@@ -20,7 +20,12 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+          config.permittedInsecurePackages = [
+            "electron-39.8.10"
+          ];
+        };
         electron = pkgs."electron_${lib.versions.major packageJsonDesktop.devDependencies.electron}";
         nodejs = pkgs.nodejs_24;
         # pnpm creates an overly long PATH env variable for child processes.
