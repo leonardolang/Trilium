@@ -44,16 +44,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1784968304,
-        "narHash": "sha256-NPXKyp40QNCk9r6kavSwqi/zv7OcLgrSRtPmHW+e74w=",
-        "owner": "FliegendeWurst",
+        "lastModified": 1763059888,
+        "narHash": "sha256-u6K3suCku8FlxUEH4U9acpI8OI2r9mwe7IkWyiiJv1s=",
+        "owner": "leonardolang",
         "repo": "pnpm2nix-nzbr",
-        "rev": "9b15300b711a50bb96e553b66aad5cad94df9c7e",
+        "rev": "88410a3476efcd0102c29d9853bb1bec11ce3bcd",
         "type": "github"
       },
       "original": {
-        "owner": "FliegendeWurst",
-        "ref": "main",
+        "owner": "leonardolang",
         "repo": "pnpm2nix-nzbr",
         "type": "github"
       }
