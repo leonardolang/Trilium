@@ -270,6 +270,7 @@
           buildInputs = [
             nodejs
             pnpm
+            electron
           ];
         };
       }
