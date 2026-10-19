@@ -266,6 +266,10 @@
               runHook postInstall
             '';
 
+            postInstall = ''
+              rm -f $out/opt/trilium-server/node_modules/tesseract.js/node_modules/.bin/opencollective-postinstall
+            '';
+
             # Symlinks pointing to /build directory are not allowed in the Nix store.
             # This removes all dangling symlinks that point to the temporary build directory.
             postFixup = ''
